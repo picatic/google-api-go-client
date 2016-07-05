@@ -800,6 +800,10 @@ func (s *MonitoredResourceDescriptor) MarshalJSON() ([]byte, error) {
 // RequestLog: Complete log information about a single HTTP request to
 // an App Engine application.
 type RequestLog struct {
+	// Type: protobuf @type "type.googleapis.com/google.appengine.logging.v1.RequestLog"
+	// Set Type to enable posting RequestLog as ProtoPayload
+	Type string `json"@type,omitempty"`
+
 	// AppEngineRelease: App Engine release version.
 	AppEngineRelease string `json:"appEngineRelease,omitempty"`
 
